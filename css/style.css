@@ -44,6 +44,7 @@ nav {
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 15px;
+  padding: 8px;
 }
 
 .burger {
@@ -62,7 +63,7 @@ nav {
 .scrollOf {
   overflow-y: hidden;
 }
-
+/*breakpoint 982*/
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -163,17 +164,24 @@ nav {
   }
 }
 
-.div {
-  /* background-color: red; */
-  /* display: flex;
-    align-items: center;
-    justify-content: center; */
+.div,
+.divContent {
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  /* justify-content: space-around; */
+  /* align-items: flex-start; */
+  flex-direction: row;
   width: 100vw;
   height: 88vh;
   text-align: center;
   /* background-image: url("../img/baner.jpeg"); */
   background-size: cover;
   scroll-snap-align: start;
+}
+.divContent p {
+  margin-left: 10vw;
+  padding: 20px;
+  font-size: 25px;
 }
 .banerImg {
   width: 100%;
@@ -235,18 +243,17 @@ nav {
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Poiret One", cursive;
+  text-shadow: 2px 2px black;
 }
 
 .banerTextBellow {
   margin-top: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
   visibility: hidden;
   text-align: center;
   width: 25%;
   padding: 5px;
-  /* margin-left: auto;
-  margin-right: auto; */
-  color: rgba(0, 0, 0, 0.741);
+  color: #f1f1f1;
   letter-spacing: 4px;
   left: 7%;
   top: 35%;
@@ -255,18 +262,56 @@ nav {
   font-size: 1vw;
   text-transform: uppercase;
   font-weight: bold;
-  /* font-family: "Andada Pro", cursive; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border: 2px solid black;
+  border: 2px solid #f1f1f1;
   border-radius: 20px;
   cursor: pointer;
+  /* background-color: rgba(255, 255, 255, 0.5);
+  color: #0072e1;
+  border: 2px solid #0072e1; */
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+  border: 2px solid black;
 }
 
-.banerTextBellow:hover {
+.banerTextBellow2 {
+  visibility: hidden;
+  margin-top: 10px;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  text-align: center;
+  width: 25%;
+  padding: 5px;
+  letter-spacing: 4px;
+  left: 7%;
+  top: 43%;
+  padding: 10px;
+  position: absolute;
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 2px solid #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  /* background-color: #0072e1; */
+  /* background-color: rgba(255, 255, 255, 0.5);
+  color: #0072e1;
+  border: 2px solid #0072e1; */
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+  border: 2px solid black;
+}
+
+.banerTextBellow:hover,
+.banerTextBellow2:hover {
   transition: 0.3s ease-out;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 2px solid rgb(255, 58, 58);
-  color: rgb(255, 58, 58);
+  /* border: 2px solid rgb(255, 58, 58); */
+  /* color: rgb(255, 58, 58); */
+  color: #f1f1f1;
+  border: 2px solid #f1f1f1;
+  background-color: #0070e178;
+  /* background-color: rgba(0, 0, 0, 0.449); */
+  color: white;
 }
 
 .dropdown {
@@ -275,6 +320,7 @@ nav {
 }
 #nav > ul > li.dropdown > a:hover {
   border: none !important;
+  background-color: rgba(0, 0, 0, 0);
 }
 .dropdown-content {
   display: none;
@@ -287,16 +333,20 @@ nav {
 }
 .dropdown-content a {
   color: #0072e1;
-  padding: 10px;
+  padding: 8px;
   text-decoration: none;
   display: block;
 }
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #0072e1;
+  color: white;
+  transition: 0.3s;
 }
 .dropdown:hover .dropdown-content {
   display: block;
 }
 #nav > ul > li > a:hover {
-  border-bottom: 1px solid black;
+  background-color: #0072e1;
+  color: white;
+  transition: ease-in-out 0.3s;
 }

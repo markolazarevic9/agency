@@ -33,6 +33,7 @@ const navSlide = () => {
 
 const banerText = document.querySelector(".banerText");
 const banerTextBellow = document.querySelector(".banerTextBellow");
+const banerTextBellow2 = document.querySelector(".banerTextBellow2");
 
 navSlide();
 
@@ -57,6 +58,8 @@ window.onload = function () {
   }
   banerTextBellow.style.animation =
     "banerTextBellowFade 1s ease-in 1.5s forwards";
+  banerTextBellow2.style.animation =
+    "banerTextBellowFade 1s ease-in 2.5s forwards";
 };
 
 dropdown.addEventListener("mouseover", function () {
