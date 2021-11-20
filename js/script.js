@@ -57,7 +57,7 @@ window.onload = function () {
   banerTextBellow.style.animation =
     "banerTextBellowFade 1s ease-in 1.5s forwards";
   banerTextBellow2.style.animation =
-    "banerTextBellowFade 1s ease-in 2.5s forwards";
+    "banerTextBellowFade 1s ease-in 1.5s forwards";
 };
 
 dropdown.addEventListener("mouseover", function () {
@@ -139,7 +139,7 @@ $(window).scroll(function () {
 window.onscroll = () => {
   let st = this.window.scrollY;
   console.log(st);
-  if (st > 200) {
+  if (st > 180) {
     document
       .querySelector("body > div:nth-child(3) > div:nth-child(1)")
       .classList.add("appearLeft");

@@ -16,13 +16,13 @@ body > div:nth-child(4) > div {
 .appearLeft {
   opacity: 1 !important;
   transform: translateX(0) !important;
-  transition: 1.5s ease-in-out;
+  transition: 2s ease-in-out;
 }
 
 .appearRight {
   opacity: 1 !important;
   transform: translateX(0) !important;
-  transition: 1.5s ease-in-out;
+  transition: 1.7s ease-in-out;
 }
 @keyframes fadeInCol {
   from {

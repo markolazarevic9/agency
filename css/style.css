@@ -64,46 +64,6 @@ nav {
 .scrollOf {
   overflow-y: hidden;
 }
-/*breakpoint 982*/
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-  .banerImg {
-    content: url(../img/baneRes3.jpg);
-    width: 100%;
-    height: 100%;
-    opacity: 1 !important;
-  }
-  /* .div {
-    height: 85vh !important;
-    background-color: rgb(245, 255, 250);
-  } */
-  nav {
-    height: 15vh !important;
-  }
-  .navLinks {
-    position: absolute;
-    right: 0px;
-    height: 85vh;
-    top: 15vh;
-    background-color: rgb(245, 255, 250);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-    width: 100%;
-    z-index: 8;
-    /* overflow-y: scroll; */
-  }
-  .navLinks li {
-    opacity: 0;
-  }
-  .burger {
-    display: block;
-  }
-}
 
 .nav-active {
   transform: translateX(0%);
@@ -117,9 +77,9 @@ nav {
   /* align-items: flex-start; */
   /* flex-direction: row; */
   width: 100vw;
-  height: 88vh;
+  /* height: 88vh; */
   text-align: center;
-  background-size: cover;
+  /* background-size: cover; */
   scroll-snap-align: start;
   background-color: #f1f1f1c7;
 }
