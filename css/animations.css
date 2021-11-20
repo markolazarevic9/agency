@@ -1,0 +1,108 @@
+/*  ------------ ANIMATIONS HOME PAGE COL6 -----------------   */
+
+body > div:nth-child(3) > div:nth-child(1) {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+body > div:nth-child(3) > div:nth-child(2) {
+  opacity: 0;
+  transform: translateX(100%);
+  padding: 20px;
+}
+body > div:nth-child(4) > div {
+  opacity: 0;
+}
+
+.appearLeft {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  transition: 1.5s ease-in-out;
+}
+
+.appearRight {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  transition: 1.5s ease-in-out;
+}
+@keyframes fadeInCol {
+  from {
+    opacity: 0;
+    transform: translateY(-3%);
+    color: white;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    color: black;
+  }
+}
+.fadeIn {
+  animation: fadeInCol 3s forwards;
+  animation-delay: 0.5s;
+  transition: 2s ease-in-out;
+}
+
+body > div:nth-child(5) > div:nth-child(1) {
+  opacity: 0;
+}
+body > div:nth-child(5) > div:nth-child(2) {
+  opacity: 0;
+}
+
+/* --------------- ANIMATE NAV -------------------------- */
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes banerTextFade {
+  from {
+    opacity: 0;
+    letter-spacing: -4px;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 4px;
+    visibility: visible;
+  }
+}
+
+@keyframes banerTextBellowFade {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes rotateSignUp {
+  from {
+    opacity: 0.5;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotateSignDown {
+  from {
+    opacity: 0.5;
+    transform: rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}

@@ -39,11 +39,9 @@ navSlide();
 
 window.onscroll = function () {
   let st = this.window.scrollY;
-  console.log(st);
 };
 $(window).scroll(function () {
   let st = $(window).scrollTop();
-  console.log(st);
   if (st > 0) {
     $("#nav").addClass("scrolled");
   } else {
@@ -71,3 +69,99 @@ dropdown.addEventListener("mouseout", function () {
   services.style.color = "#0072e1";
   dropdownSign.style.animation = "rotateSignDown 0.5s ease-in forwards";
 });
+
+let inputName = document.querySelector(
+  "body > div:nth-child(5) > div:nth-child(2) > form > input[type=text]:nth-child(1)"
+);
+
+let inputs = document.querySelectorAll(
+  "body > div:nth-child(5) > div:nth-child(2) > form > input"
+);
+
+let arr = [];
+inputs.forEach((input) => arr.push(input));
+console.log(arr);
+let message = document.querySelector(
+  "body > div:nth-child(5) > div:nth-child(2) > form > textarea"
+);
+arr.push(message);
+console.log(arr);
+
+let textHolders = document.querySelectorAll(
+  "body > div:nth-child(5) > div:nth-child(2) > form > label"
+);
+let placeholderValue = "";
+
+arr.forEach((input) =>
+  input.addEventListener("focus", () => {
+    placeholderValue = input.placeholder;
+    let inputName = input.getAttribute("name");
+    input.placeholder = "";
+    textHolders.forEach((label) => {
+      if (label.getAttribute("for") == inputName) {
+        label.classList.remove("textHolderHidden");
+        label.classList.add("textHolderVisible");
+      }
+    });
+  })
+);
+
+arr.forEach((input) =>
+  input.addEventListener("blur", () => {
+    input.placeholder = placeholderValue;
+    placeholderValue = "";
+    let inputName = input.getAttribute("name");
+    textHolders.forEach((label) => {
+      if (label.getAttribute("for") == inputName) {
+        if (input.value == "") {
+          label.classList.remove("textHolderVisible");
+          label.classList.add("textHolderHidden");
+        }
+      }
+    });
+  })
+);
+
+window.onscroll = function () {
+  let st = this.window.scrollY;
+};
+$(window).scroll(function () {
+  let st = $(window).scrollTop();
+  if (st > 0) {
+    $("#nav").addClass("scrolled");
+  } else {
+    $("#nav").removeClass("scrolled");
+  }
+});
+
+/*   Animations  */
+
+window.onscroll = () => {
+  let st = this.window.scrollY;
+  console.log(st);
+  if (st > 200) {
+    document
+      .querySelector("body > div:nth-child(3) > div:nth-child(1)")
+      .classList.add("appearLeft");
+    document
+      .querySelector("body > div:nth-child(3) > div:nth-child(2)")
+      .classList.add("appearRight");
+  }
+
+  if (st > 850) {
+    document
+      .querySelector("body > div:nth-child(4) > div:nth-child(1)")
+      .classList.add("fadeIn");
+    document
+      .querySelector("body > div:nth-child(4) > div:nth-child(2)")
+      .classList.add("fadeIn");
+  }
+  if (st > 1700) {
+    document
+      .querySelector("body > div:nth-child(5) > div:nth-child(1)")
+      .classList.add("appearRight");
+    document
+      .querySelector("body > div:nth-child(5) > div:nth-child(2)")
+      .classList.add("appearLeft");
+  }
+};
