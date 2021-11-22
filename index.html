@@ -35,7 +35,7 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <title>Success</title>
+    <title>Access Staffing</title>
   </head>
   <body>
     <nav id="nav">
@@ -43,7 +43,9 @@
         <img src="img/logo.png" alt="Logo" class="responsiveImg" />
       </div>
       <ul class="navLinks">
-        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="index.html"> <i class="fas fa-home"></i> Home</a>
+        </li>
         <li class="dropdown">
           <a href="#">Services <i class="far fa-caret-square-down"></i></a>
           <div class="dropdown-content">
@@ -107,13 +109,20 @@
       <div class="col-6">
         <p class="headingP">Contact Us <i class="far fa-paper-plane"></i></p>
 
-        <form action="" autocomplete="off">
+        <form action="" autocomplete="off" class="contact">
           <input name="name" placeholder="Enter your name" type="text" />
           <label class="textHolder" for="name">Enter your name</label>
 
           <input name="email" placeholder="Enter your email" type="email" />
           <label class="textHolder" for="email">Enter your email</label>
-
+          <input
+            name="phoneNumber"
+            placeholder="Enter your phone number"
+            type="email"
+          />
+          <label class="textHolder" for="phoneNumber"
+            >Enter your phone number</label
+          >
           <textarea
             placeholder="Enter your message"
             name="message"
@@ -142,12 +151,89 @@
               let year = new Date();
               document.write(year.getFullYear());
             </script>
-            Succes int</em
+            Access Staffing</em
+          >
+          <br />
+          <a
+            href="https://www.linkedin.com/in/marko-lazarevic-dev/"
+            class="author"
+            target="_blank"
+            >Design by Marko Dev</a
           >
         </div>
       </div>
     </footer>
 
+    <div class="services">
+      <div class="servicesContent">
+        <span id="exitServices"><i class="fas fa-times"></i></span>
+        <div class="hire">
+          <h2>Hire</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            repudiandae maxime est nostrum obcaecati sequi? Molestias illo
+            exercitationem, perspiciatis, necessitatibus velit reiciendis autem
+            delectus laborum numquam repellat iure recusandae nobis.
+          </p>
+          <hr />
+          <form action="" class="services">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="submit" />
+          </form>
+        </div>
+        <div class="findJob">
+          <h2>Find a job</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            repudiandae maxime est nostrum obcaecati sequi? Molestias illo
+            exercitationem, perspiciatis, necessitatibus velit reiciendis autem
+            delectus laborum numquam repellat iure recusandae nobis.
+          </p>
+          <hr />
+          <form action="" class="servicesForm" autocomplete="off">
+            <input
+              type="text"
+              name="candidateName"
+              placeholder="Enter your name"
+            />
+
+            <input
+              type="email"
+              name="candidateEmail"
+              placeholder="Enter your email"
+            />
+            <input
+              type="text"
+              name="candidatePhone"
+              placeholder="Enter your phone number"
+            />
+            <input
+              type="text"
+              name="candidateLocation"
+              placeholder="Enter your location"
+            />
+            <div class="mb-3">
+              <label for="formFileSm" class="form-label">Your CV</label>
+              <input
+                class="form-control form-control-sm"
+                id="formFileSm"
+                type="file"
+              />
+              <label for="formFileSm" class="form-label">You resume</label>
+              <input
+                class="form-control form-control-sm"
+                id="formFileSm"
+                type="file"
+              />
+            </div>
+
+            <input type="submit" />
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>

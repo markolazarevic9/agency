@@ -2,13 +2,14 @@ const services = document.querySelector("#nav > ul > li:nth-child(2) > a");
 const dropdownSign = document.querySelector(
   "#nav > ul > li:nth-child(2) > a > i"
 );
+const body = document.querySelector("body");
+
 const dropdown = document.querySelector("#nav > ul > li.dropdown");
 
 const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".navLinks");
   const navLinks = document.querySelectorAll(".navLinks li");
-  const body = document.querySelector("body");
   const logo = document.querySelector(".logo");
 
   logo.addEventListener("click", function () {
@@ -165,3 +166,70 @@ window.onscroll = () => {
       .classList.add("appearLeft");
   }
 };
+
+/* ------- SERVICES ------- */
+
+const hire = document.querySelector(
+  "#nav > ul > li.dropdown > div > a:nth-child(1)"
+);
+const find = document.querySelector(
+  "#nav > ul > li.dropdown > div > a:nth-child(2)"
+);
+
+const servicesDiv = document.querySelector(".services");
+const exit = document.getElementById("exitServices");
+const hireContent = document.querySelector(".hire");
+const findJobContent = document.querySelector(".findJob");
+const findJobBtn = document.querySelector(
+  "body > div.div > div > div > p.banerTextBellow"
+);
+const hireBtn = document.querySelector(
+  "body > div.div > div > div > p.banerTextBellow2"
+);
+
+hire.addEventListener("click", function (btn) {
+  btn.preventDefault();
+  showHire();
+});
+
+find.addEventListener("click", function (btn) {
+  btn.preventDefault();
+  showJob();
+});
+
+findJobBtn.addEventListener("click", showJob);
+hireBtn.addEventListener("click", showHire);
+
+exit.addEventListener("click", () => {
+  servicesDiv.classList.remove("servicesActive");
+  body.classList.remove("scrollOf");
+});
+
+/* f-ja prikazPosao i f-ja prikaz za hire */
+
+function showServices() {
+  servicesDiv.style.animation = `showServices 3s ease-in-ou 2s forwards `;
+  servicesDiv.style.transition = "2s";
+  servicesDiv.classList.add("servicesActive");
+  body.classList.add("scrollOf");
+  body.style.backgroundColor = "#f1f1f16d";
+  let st = window.scrollY;
+  let position = st;
+  servicesDiv.style.top = `${position}px`;
+}
+
+function showJob() {
+  findJobContent.classList.add("displayBlock");
+  if (hireContent.classList.contains("displayBlock")) {
+    hireContent.classList.remove("displayBlock");
+  }
+  showServices();
+}
+
+function showHire() {
+  hireContent.classList.add("displayBlock");
+  if (findJobContent.classList.contains("displayBlock")) {
+    findJobContent.classList.remove("displayBlock");
+  }
+  showServices();
+}
