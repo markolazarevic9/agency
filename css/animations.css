@@ -113,9 +113,26 @@ body > div:nth-child(5) > div:nth-child(2) {
   from {
     opacity: 0;
     display: none;
+    /* transform: translateX(50%); */
+    transform: translateY(-50%);
   }
   to {
     opacity: 1;
     display: block;
+    /* transform: translateX(0); */
+    transform: translateY(0);
+  }
+}
+
+@keyframes hideServices {
+  from {
+    opacity: 1;
+    display: block;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    display: none;
+    transform: translateX(-100%);
   }
 }

@@ -201,16 +201,17 @@ findJobBtn.addEventListener("click", showJob);
 hireBtn.addEventListener("click", showHire);
 
 exit.addEventListener("click", () => {
-  servicesDiv.classList.remove("servicesActive");
+  servicesDiv.style.animation = `hideServices 1s forwards`;
+  // servicesDiv.classList.remove("servicesActive");
+  // servicesDiv.style.animation = "";
   body.classList.remove("scrollOf");
 });
 
 /* f-ja prikazPosao i f-ja prikaz za hire */
 
 function showServices() {
-  servicesDiv.style.animation = `showServices 3s ease-in-ou 2s forwards `;
-  servicesDiv.style.transition = "2s";
   servicesDiv.classList.add("servicesActive");
+  servicesDiv.style.animation = `showServices 1s ease-in-out 0.1s forwards`;
   body.classList.add("scrollOf");
   body.style.backgroundColor = "#f1f1f16d";
   let st = window.scrollY;

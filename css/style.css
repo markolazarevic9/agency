@@ -433,6 +433,7 @@ body > footer > div h3 {
 /*  ------------------------ SERVICES ---------------------*/
 
 .services {
+  opacity: 0;
   display: none;
   text-align: center;
 }
@@ -443,7 +444,7 @@ body > footer > div h3 {
   height: 100vh;
   width: 100vw;
   background-color: #f1f1f16d;
-  transition: 1s ease-in-out;
+  transition: 0.3s ease-in-out;
   z-index: 200;
 }
 
